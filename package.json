@@ -1,0 +1,26 @@
+{
+  "name": "JournalMaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf -- dist css-dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run clean && node devserver.js",
+    "build": "npm run clean && webpack && ./node_modules/css-minify/bin/css-minify.js -d src/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "css-minify": "^1.0.1",
+    "express": "^4.16.3",
+    "rimraf": "^2.6.2",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-hot-middleware": "^2.22.3"
+  }
+}
